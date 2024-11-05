@@ -1,10 +1,12 @@
-#area del triangulo equilatero
+firstVolt = int(input("Enter the first volt: "))
+secondVolt = int(input("Enter the second volt: "))
+thirdVolt = int(input("Enter the third volt: "))
 
-import math
+averageVolt = (firstVolt + secondVolt + thirdVolt) / 3 
 
-a = int(input("ingrese el lado del triangulo: ")) 
-A = (math.sqrt(3) / 4) * math.pow(a, 2)
-if A > 1000:
-    print("DATOS NO VÁLIDOS")
-else:
-    print(f"""El area del triangulo es: {A}""")
+if averageVolt < 115:
+    print("VOLTAJE CORRECTO")
+elif averageVolt > 115 and averageVolt < 220:
+    print("ALTO VOLTAJE")
+elif averageVolt > 220:
+    print("PELIGRO")
