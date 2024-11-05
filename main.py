@@ -1,13 +1,10 @@
-voltOne = int(input("Enter the first voltage you want to average: "))
-voltTwo = int(input("Enter the second voltage you want to average: "))
-voltThree = int(input("Enter the third voltage you want to average: "))
-voltFour = int(input("Enter the fourth voltage you want to average: "))
-voltFive = int(input("Enter the fifth voltage you want to average: "))
+#area del triangulo equilatero
 
-averageVoltage = (voltOne + voltTwo + voltThree + voltFour + voltFive) / 5
+import math
 
-if averageVoltage > 220:
-    print("ALTO VOLTAJE")
-else: 
-    print("VOLTAJE CORRECTO")
-    
+a = int(input("ingrese el lado del triangulo: ")) 
+A = (math.sqrt(3) / 4) * math.pow(a, 2)
+if A > 1000:
+    print("DATOS NO VÁLIDOS")
+else:
+    print(f"""El area del triangulo es: {A}""")
